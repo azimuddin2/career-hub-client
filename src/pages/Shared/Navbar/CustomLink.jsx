@@ -6,6 +6,7 @@ const CustomLink = ({ children, to, ...props }) => {
 
     return (
         <Link
+        className="font-semibold"
             style={{
                 color: match ? "#7E90FE" : "#757575"
             }}
