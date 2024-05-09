@@ -1,10 +1,12 @@
+import { RouterProvider } from 'react-router-dom'
 import './App.css'
+import router from './router/Routes'
 
 function App() {
 
   return (
     <>
-      <h2 className='text-3xl text-center'>Career Hub Project</h2>
+      <RouterProvider router={router}></RouterProvider>
     </>
   )
 }
