@@ -39,7 +39,7 @@ const Categories = () => {
                 <h2 className="text-4xl text-accent font-semibold">Job Category List</h2>
                 <p className="text-neutral text-sm mt-2">Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
-            <div className="mt-8 grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-4 gap-4">
                 {
                     categories?.map(category => <Category
                         key={category.id}
