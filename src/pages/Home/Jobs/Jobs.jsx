@@ -1,7 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import Job from "./Job";
 import Button from "../../../components/Button/Button";
 import { Link } from "react-router-dom";
+import Job from "../../../components/Job/Job";
+import Loading from "../../Shared/Loading/Loading";
+import ErrorMessage from "../../Shared/ErrorMessage/ErrorMessage";
 
 const Jobs = () => {
 
@@ -17,11 +19,11 @@ const Jobs = () => {
     const jobsCollection = jobs.slice(0, 4);
 
     if (isLoading) {
-        return <p>Loading...</p>
+        return <Loading></Loading>
     }
 
     if (error) {
-        return <p>{error.message}</p>
+        return <ErrorMessage message={error.message}></ErrorMessage>
     }
 
     return (
