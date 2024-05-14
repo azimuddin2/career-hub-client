@@ -42,12 +42,12 @@ const Jobs = () => {
                 }
             </div>
             <div className="flex justify-center mt-10">
-                <Button>
-                    <Link to={'/all-jobs'} className="flex items-center">
+                <Link to={'/all-jobs'}>
+                    <Button>
                         <span>See All Jobs</span>
-                        <IoArrowForwardCircleOutline className="text-xl ms-1" />
-                    </Link>
-                </Button>
+                        <IoArrowForwardCircleOutline className="text-xl ms-[-3px]" />
+                    </Button>
+                </Link>
             </div>
         </section>
     );

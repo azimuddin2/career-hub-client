@@ -16,14 +16,14 @@ const Banner = () => {
                         />
                     </div>
                     <div className='flex-1 mt-4 lg:mt-0'>
-                        <h1 className="text-4xl lg:text-5xl text-accent font-bold mb-2 lg:mb-4">One Step <br/> Closer To Your <br /> <span className="text-primary">Dream Job</span></h1>
+                        <h1 className="text-4xl lg:text-5xl text-accent font-bold mb-2 lg:mb-4">One Step <br /> Closer To Your <br /> <span className="text-primary">Dream Job</span></h1>
                         <p className="my-4 lg:my-5 text-accent text-sm lg:w-4/5">Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
-                        <Button>
-                            <Link to={'/all-jobs'} className="flex items-center">
+                        <Link to={'/all-jobs'}>
+                            <Button>
                                 <span>Get Started</span>
-                                <IoArrowForwardCircleOutline className="text-xl ms-1" />
-                            </Link>
-                        </Button>
+                                <IoArrowForwardCircleOutline className="text-xl ms-[-3px]" />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -9,13 +9,13 @@ const Footer = () => {
                         <h2 className='text-white font-semibold text-2xl'>CareerHub</h2>
                         <p>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
                         <div className="flex items-center mt-5">
-                            <p className="bg-white rounded-full w-8 h-8 flex justify-center items-center mr-2">
+                            <p className="bg-white rounded-full w-8 h-8 cursor-pointer flex justify-center items-center mr-2">
                                 <FaFacebookF className="text-[#337FFF] text-lg" />
                             </p>
-                            <p className="bg-white rounded-full w-8 h-8 flex justify-center items-center mr-2">
+                            <p className="bg-white rounded-full w-8 h-8 cursor-pointer flex justify-center items-center mr-2">
                                 <FaTwitter className="text-lg text-[#33CCFF]" />
                             </p>
-                            <p className="bg-white rounded-full w-8 h-8 flex justify-center items-center">
+                            <p className="bg-white rounded-full w-8 h-8 cursor-pointer flex justify-center items-center">
                                 <FaLinkedinIn className="text-lg text-[#0077B5]" />
                             </p>
                         </div>

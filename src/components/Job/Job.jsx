@@ -31,12 +31,12 @@ const Job = ({ job }) => {
                 </div>
 
                 <div className="card-actions justify-start mt-4">
-                    <Button>
-                        <Link to={'/all-jobs'} className="flex items-center">
+                    <Link to={'/all-jobs'}>
+                        <Button>
                             <span>View Details</span>
-                            <IoArrowForwardCircleOutline className="text-xl ms-1" />
-                        </Link>
-                    </Button>
+                            <IoArrowForwardCircleOutline className="text-xl ms-[-4px]" />
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>
