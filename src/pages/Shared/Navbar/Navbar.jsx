@@ -39,7 +39,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to={'/'}>
+                    <Link to={'/all-jobs'}>
                         <Button>Star Applying</Button>
                     </Link>
                 </div>

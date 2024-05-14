@@ -1,8 +1,9 @@
 import React from 'react';
-import Button from '../Button/Button';
 import { GrLocation } from 'react-icons/gr';
 import { HiOutlineCurrencyDollar } from 'react-icons/hi';
-import { CiDollar } from 'react-icons/ci';
+import Button from '../Button/Button';
+import { IoArrowForwardCircleOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 const Job = ({ job }) => {
     const { logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
@@ -24,13 +25,18 @@ const Job = ({ job }) => {
                         <span className='ms-1'>{location}</span>
                     </p>
                     <p className='flex items-center text-neutral'>
-                        <HiOutlineCurrencyDollar className='text-lg'/>
+                        <HiOutlineCurrencyDollar className='text-lg' />
                         <span className='ms-1'>Salary: {salary}</span>
                     </p>
                 </div>
 
                 <div className="card-actions justify-start mt-4">
-                    <Button>View Details</Button>
+                    <Button>
+                        <Link to={'/all-jobs'} className="flex items-center">
+                            <span>View Details</span>
+                            <IoArrowForwardCircleOutline className="text-xl ms-1" />
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </div>
