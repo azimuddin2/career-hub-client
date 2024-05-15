@@ -6,7 +6,7 @@ import { IoArrowForwardCircleOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 const Job = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
+    const { _id, logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
 
     return (
         <div className="p-6 border rounded bg-base-100">
@@ -31,7 +31,7 @@ const Job = ({ job }) => {
                 </div>
 
                 <div className="card-actions justify-start mt-4">
-                    <Link to={'/all-jobs'}>
+                    <Link to={`/job/${_id}`}>
                         <Button>
                             <span>View Details</span>
                             <IoArrowForwardCircleOutline className="text-xl ms-[-4px]" />
