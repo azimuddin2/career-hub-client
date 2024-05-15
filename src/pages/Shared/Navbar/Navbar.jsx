@@ -10,7 +10,7 @@ const Navbar = () => {
             <CustomLink to='/'>Home</CustomLink>
         </li>
         <li>
-            <CustomLink to='/jobs'>Applied Jobs</CustomLink>
+            <CustomLink to='/applied-jobs'>Applied Jobs</CustomLink>
         </li>
         <li>
             <CustomLink to='/blog'>Blog</CustomLink>

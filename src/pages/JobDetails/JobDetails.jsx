@@ -1,13 +1,43 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import PageCover from "../../components/PageCover/PageCover";
 import { GrLocation } from "react-icons/gr";
 import { FiMail } from "react-icons/fi";
 import { HiOutlineCurrencyDollar, HiOutlinePhone } from "react-icons/hi";
 import { MdOutlineWorkHistory } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const JobDetails = () => {
     const jobDetails = useLoaderData();
     const { company_name, job_title, job_description, job_responsibility, educational_requirements, experiences, salary, contact_information } = jobDetails;
+    const navigate = useNavigate();
+
+    const handleApplyNow = (job) => {
+        const { logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
+
+        const applyJobInfo = {
+            logo,
+            job_title,
+            company_name,
+            remote_or_onsite,
+            job_type,
+            location,
+            salary
+        };
+        fetch('http://localhost:5000/apply-job', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(applyJobInfo)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.insertedId) {
+                    navigate('/applied-jobs');
+                    toast.success('Job application is successful.');
+                }
+            })
+    };
 
     return (
         <section>
@@ -58,7 +88,12 @@ const JobDetails = () => {
 
                     </div>
 
-                    <button className="btn bg-gradient-to-r from-primary to-secondary text-white flex items-center rounded font-medium w-full mt-3">Apply Now</button>
+                    <button
+                        onClick={() => handleApplyNow(jobDetails)}
+                        className="btn bg-gradient-to-r from-primary to-secondary text-white flex items-center rounded font-medium w-full mt-3"
+                    >
+                        Apply Now
+                    </button>
 
                 </div>
 
