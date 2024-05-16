@@ -11,7 +11,7 @@ const AppliedJobs = () => {
     const { isLoading, error, data: appliedJobs = [] } = useQuery({
         queryKey: ['apply-job', jobFilter],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/apply-job?filter=${jobFilter}`);
+            const res = await fetch(`https://career-hub-server-zeta.vercel.app/apply-job?filter=${jobFilter}`);
             const data = await res.json();
             return data;
         }

@@ -8,7 +8,7 @@ const AllJobs = () => {
     const { isLoading, error, data: jobs = [] } = useQuery({
         queryKey: ['jobs'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/jobs');
+            const res = await fetch('https://career-hub-server-zeta.vercel.app/jobs');
             const data = await res.json();
             return data;
         }

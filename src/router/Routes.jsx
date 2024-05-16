@@ -23,7 +23,7 @@ const router = createBrowserRouter([
                 path: '/job/:id',
                 element: <JobDetails></JobDetails>,
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/job/${params.id}`)
+                    return fetch(`https://career-hub-server-zeta.vercel.app/job/${params.id}`)
                 }
             },
             {

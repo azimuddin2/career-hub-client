@@ -23,7 +23,7 @@ const JobDetails = () => {
             location,
             salary
         };
-        fetch('http://localhost:5000/apply-job', {
+        fetch('https://career-hub-server-zeta.vercel.app/apply-job', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
