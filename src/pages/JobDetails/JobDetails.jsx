@@ -31,7 +31,7 @@ const JobDetails = () => {
             body: JSON.stringify(applyJobInfo)
         })
             .then(res => res.json())
-            .then(result => {
+            .then((result) => {
                 if (result.insertedId) {
                     navigate('/applied-jobs');
                     toast.success('Job application is successful.');
@@ -42,23 +42,18 @@ const JobDetails = () => {
     return (
         <section>
             <PageCover title={'Job Details'}></PageCover>
-
-            <div className="max-w-screen-lg mx-auto my-16 flex gap-12">
-
-                <div className="w-3/5">
+            <div className="max-w-screen-lg lg:mx-auto mx-5 my-12 lg:my-16 lg:flex gap-12">
+                <div className="lg:w-3/5 w-full">
                     <p className="text-neutral mb-4"><span className="text-accent font-medium">Company Name:</span> {company_name}</p>
                     <p className="text-neutral mb-4"><span className="text-accent font-medium">Job Description:</span> {job_description}</p>
                     <p className="text-neutral mb-4"><span className="text-accent font-medium">Job Responsibility:</span> {job_responsibility}</p>
                     <p className="text-neutral mb-4"><span className="text-accent font-medium">Educational Requirements:</span> {educational_requirements}</p>
                     <p className="text-neutral"><span className="text-accent font-medium">Experiences:</span> {experiences}</p>
                 </div>
-
-                <div className="w-1/3">
+                <div className="lg:w-1/3 w-full mt-5 lg:mt-0">
                     <div className="bg-[#F4F2FF] p-6 rounded">
-
                         <div>
                             <h3 className="border-b text-lg text-accent font-semibold pb-2">Job Details</h3>
-
                             <p className="flex items-center my-2">
                                 <HiOutlineCurrencyDollar className="text-lg text-primary mr-1" />
                                 <h6 className="text-neutral"><span className="text-success font-medium">Salary:</span> {salary} (Per Month)</h6>
@@ -67,9 +62,7 @@ const JobDetails = () => {
                                 <MdOutlineWorkHistory className="text-lg text-primary mr-1" />
                                 <h6 className="text-neutral"><span className="text-success font-medium">Job Title:</span> {job_title}</h6>
                             </p>
-
                         </div>
-
                         <div className="mt-5">
                             <h3 className="border-b text-lg text-accent font-semibold pb-2">Contact Information</h3>
                             <p className="flex items-center mt-2">
@@ -85,20 +78,15 @@ const JobDetails = () => {
                                 <h6 className="text-neutral"><span className="text-success font-medium">Address:</span> {contact_information.address}</h6>
                             </p>
                         </div>
-
                     </div>
-
                     <button
                         onClick={() => handleApplyNow(jobDetails)}
                         className="btn bg-gradient-to-r from-primary to-secondary text-white flex items-center rounded font-medium w-full mt-3"
                     >
                         Apply Now
                     </button>
-
                 </div>
-
             </div>
-
         </section>
     );
 };

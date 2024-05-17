@@ -33,11 +33,9 @@ const AppliedJobs = () => {
     return (
         <section>
             <PageCover title={'Applied Jobs'}></PageCover>
-            <div className="max-w-screen-lg mx-auto my-20">
-
-                <h2>Applied Jobs: 0{appliedJobs?.length}</h2>
-
-                <div className="flex justify-end mb-5">
+            <div className="max-w-screen-lg lg:mx-auto mx-5 my-12 lg:my-20">
+                <div className="flex justify-between items-center mb-5">
+                    <h2 className="text-success text-lg">Applied Jobs: 0{appliedJobs?.length}</h2>
                     <select
                         value={jobFilter}
                         onChange={handleJobFilter}
@@ -52,7 +50,6 @@ const AppliedJobs = () => {
                         }
                     </select>
                 </div>
-
                 <div>
                     {
                         appliedJobs?.map(appliedJob => <AppliedJob
@@ -61,7 +58,6 @@ const AppliedJobs = () => {
                         ></AppliedJob>)
                     }
                 </div>
-
             </div>
         </section>
     );

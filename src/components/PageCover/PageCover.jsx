@@ -4,18 +4,23 @@ import backgroundRight from '../../assets/images/bg2.png';
 const PageCover = ({ title }) => {
 
     return (
-        <div className='bg-[#F9FAFF]'>
-
-            <div className=''>
+        <section className='bg-[#F9FAFF]'>
+            <div className='pt-20'>
                 <h2 className='text-3xl text-accent font-semibold text-center'>{title}</h2>
             </div>
-            
             <div className='flex justify-between'>
-                <img src={backgroundLeft} alt="" className='w-64' />
-                <img src={backgroundRight} alt="" className='absolute top-0 right-0 w-60' />
+                <img
+                    src={backgroundLeft}
+                    alt="background"
+                    className='w-64'
+                />
+                <img
+                    src={backgroundRight}
+                    alt="background"
+                    className='absolute top-0 right-0 w-60 lg:block hidden'
+                />
             </div>
-
-        </div>
+        </section>
     );
 };
 
