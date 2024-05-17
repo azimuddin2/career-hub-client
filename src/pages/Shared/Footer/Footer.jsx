@@ -3,7 +3,7 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 const Footer = () => {
     return (
         <div className="bg-accent text-neutral">
-            <div className="max-w-screen-lg mx-auto">
+            <div className="max-w-screen-lg lg:mx-auto mx-5">
                 <footer className="footer pt-20 pb-10">
                     <nav className='w-64'>
                         <h2 className='text-white font-semibold text-2xl'>CareerHub</h2>
@@ -47,13 +47,8 @@ const Footer = () => {
                         <a className="link link-hover">+1 777 - 978 - 5570</a>
                     </nav>
                 </footer>
-                <footer className="footer py-4 border-t border-neutral">
-                    <aside className="items-center grid-flow-col">
-                        <p>© 2024 CareerHub. All Rights Reserved</p>
-                    </aside>
-                    <nav className="md:place-self-center md:justify-self-end">
-                        <p>Powered by CareerHub</p>
-                    </nav>
+                <footer className="py-4 border-t border-neutral">
+                    <p className="text-center">© 2024 CareerHub. All Rights Reserved</p>
                 </footer>
             </div>
         </div>

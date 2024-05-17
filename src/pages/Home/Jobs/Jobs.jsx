@@ -28,9 +28,9 @@ const Jobs = () => {
     }
 
     return (
-        <section className="max-w-screen-lg mx-auto mb-20">
+        <section className="max-w-screen-lg lg:mx-auto mx-5 mb-12 lg:mb-20">
             <div className="text-center">
-                <h2 className="text-4xl text-accent font-semibold">Featured Jobs</h2>
+                <h2 className="text-3xl lg:text-4xl text-accent font-semibold">Featured Jobs</h2>
                 <p className="text-neutral text-sm mt-2">Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -41,7 +41,7 @@ const Jobs = () => {
                     ></Job>)
                 }
             </div>
-            <div className="flex justify-center mt-10">
+            <div className="flex justify-center mt-6 lg:mt-10">
                 <Link to={'/all-jobs'}>
                     <Button>
                         <span>See All Jobs</span>

@@ -34,12 +34,12 @@ const Categories = () => {
     ];
 
     return (
-        <section className="max-w-screen-lg mx-auto my-20">
+        <section className="max-w-screen-lg lg:mx-auto mx-5 my-12 lg:my-20">
             <div className="text-center">
-                <h2 className="text-4xl text-accent font-semibold">Job Category List</h2>
+                <h2 className="text-3xl lg:text-4xl text-accent font-semibold">Job Category List</h2>
                 <p className="text-neutral text-sm mt-2">Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {
                     categories?.map(category => <Category
                         key={category.id}
