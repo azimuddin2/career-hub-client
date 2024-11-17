@@ -19,8 +19,6 @@ export default {
           "base-100": "#ffffff",
         },
       },
-      "dark",
-      "cupcake",
     ],
   },
   plugins: [
